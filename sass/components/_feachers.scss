@@ -5,41 +5,43 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-
   color: var(--secondary-color);
 
-  &__icon {
-    @extend .flex-center;
+  width: 100%;
+  padding: 0 15px;
 
-    margin-left: 102px;
-    margin-right: 102px;
-    padding-top: 25px;
+  &__item:first-child {
+    margin-top: 60px;
+  }
+
+  &__item:not(:first-child) {
+    margin-top: 30px;
+  }
+
+  &__icon {
+    margin: auto;
 
     width: 70px;
     height: 70px;
     fill: currentColor;
   }
 
-  &__list {
-    display: flex;
-    justify-content: center;
-  }
-
-  &__item + &__item {
-    margin-left: 30px;
-  }
-
   &__image {
-    width: 270px;
+    @extend .flex-center;
     height: 120px;
-    margin-top: 95px;
-  
+
     background: #f5f4fa;
     border-radius: 4px;
+
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
 
   &__text {
-    width: 270px;
     margin-top: 10px;
+    @media screen and (min-width: 1200px) {
+      width: 270px;
+    }
   }
 }
