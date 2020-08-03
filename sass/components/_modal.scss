@@ -5,7 +5,7 @@
   font-size: 14px;
   line-height: 24px;
   letter-spacing: 0.03em;
-  
+
   color: var(--secondary-color);
 
   position: fixed;
@@ -17,14 +17,24 @@
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  align-items: center;
+  align-items: stretch;
 
   background: var(--ternary-color);
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 4px;
 
-  width: 528px;
-  height: 581px;
+  width: calc(100% - 30px);
+  height: 609px;
+
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+
+  @media screen and (min-width: 1200px) {
+    width: 528px;
+    height: 581px;
+  }
 
   margin: auto;
   z-index: 1;
@@ -42,6 +52,8 @@
   color: #212121;
 
   margin-top: 40px;
+  padding-right: 40px;
+  padding-left: 40px;
 }
 
 .form-field {
@@ -49,8 +61,7 @@
 
   display: flex;
   flex-direction: column;
-  
-  width: 448px;
+
   height: 40px;
   margin-top: 28px;
   margin-right: 40px;
@@ -96,7 +107,7 @@
 
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
-  transform: translate(-25px, -25px)
+  transform: translate(-25px, -25px);
 }
 
 .form-textarea:not(:placeholder-shown) ~ label,
@@ -127,14 +138,13 @@
   overflow: hidden;
 }
 
-.form-field-textarea{
+.form-field-textarea {
   position: relative;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  width: 448px;
   margin-top: 28px;
   margin-right: 40px;
   margin-left: 40px;
@@ -142,7 +152,7 @@
 
 .form-label-textarea {
   position: absolute;
-  
+
   left: 16px;
   top: 12px;
   height: 96px;
@@ -157,6 +167,8 @@
 
 .checkbox {
   margin-top: 20px;
+  padding-right: 35px;
+  padding-left: 40px;
 }
 
 .checkbox-field {
@@ -166,11 +178,16 @@
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
+  font-size: 12px;
+  line-height: 14px;
   letter-spacing: 0.03em;
 
   color: var(--secondary-color);
+
+  @media screen and (min-width: 1200px) {
+    font-size: 14px;
+    line-height: 24px;
+  }
 }
 
 .checkbox-label {
@@ -185,7 +202,7 @@
 }
 
 .checkbox-label::before {
-  content: '';
+  content: "";
   display: block;
   width: 16px;
   height: 16px;
@@ -223,6 +240,11 @@
   height: 50px;
   margin-top: 30px;
   margin-bottom: 40px;
+  margin-left: 125px;
+
+  @media screen and (min-width: 1200px) {
+    margin-left: 165px;
+  }
 
   background: var(--acent-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
@@ -246,7 +268,7 @@
 }
 
 .overflow:after {
-  content: '';
+  content: "";
   position: fixed;
   top: 0;
   right: 0;
@@ -273,7 +295,7 @@
 
   border: 1px solid rgba(0, 0, 0, 0.1);
   box-sizing: border-box;
-  padding: 5px
+  padding: 5px;
 }
 
 .close-button:hover .icon {
