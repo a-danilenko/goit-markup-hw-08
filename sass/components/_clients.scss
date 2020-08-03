@@ -2,11 +2,13 @@
   margin-bottom: 94px;
 
   &__list {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-  
-    margin-top: 50px;
+    @media screen and(min-width:1200px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+
+      margin-top: 50px;
+    }
   }
 
   &__item + &__item {
@@ -14,11 +16,7 @@
   }
 
   &__link {
-    @extend .flex-center;
-
-    width: 170px;
-    height: 90px;
-
+    display: inline-flex;
     border: 1px solid #afb1b8;
     box-sizing: border-box;
     border-radius: 4px;
@@ -32,6 +30,15 @@
       border: 1px solid var(--acent-color);
       cursor: pointer;
       fill: var(--acent-color);
+    }
+
+    @media screen and(min-width: 1200px) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      width: 170px;
+      height: 90px;
     }
   }
 
